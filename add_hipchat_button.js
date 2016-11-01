@@ -1,16 +1,17 @@
 $(function(){
-    console.log("loding...");
+    console.log("hipchat buttons loading...");
 
     setInterval(function() {
         var buttons = $(".msg-line > .hc-dropdown");
 
         buttons.each(function(_, element) {
             var b = $(element);
-            if (b.children('.btn-addon').length) return;
+            if (b.children('.btn-addon').length) return; // if already button exists, do nothing
+            
             // add quote button
             var quoteButton = $("<button class='btn-addon'>quote</button>");
             quoteButton.bind("click", function () {
-                setTimeout(function() { // react側でゴニョゴニョやってるので遅らせる
+                setTimeout(function() { // delay to avoid React clears message-input
                     $("#hc-message-input").val("/quote " + b.next('.msg-line').text());
                 }, 100);
             });

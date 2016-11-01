@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "manifest_version": 2,
   "description": "Add quote buttons and response buttons to hipchat.",
+  "author": "taro.furuya@gmail.com",
   "content_scripts": [
     {
       "matches": ["https://*.hipchat.com/chat/room/*"],
