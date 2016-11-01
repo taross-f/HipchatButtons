@@ -1,0 +1,12 @@
+{
+  "name": "hipchat buttons",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "Add quote buttons and response buttons to hipchat.",
+  "content_scripts": [
+    {
+      "matches": ["https://*.hipchat.com/chat/room/*"],
+      "js": ["jquery-3.1.1.min.js", "add_hipchat_button.js"]
+    }
+  ]
+}
