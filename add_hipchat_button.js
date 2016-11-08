@@ -9,7 +9,7 @@ $(function(){
             if (b.children('.btn-addon').length) return; // if already button exists, do nothing
             
             // add quote button
-            var quoteButton = $("<button class='btn btn-success btn-addon btn-xs'>quote</button>");
+            var quoteButton = $("<button style='height:18px;' class='btn btn-success btn-addon btn-xs'>quote</button>");
             quoteButton.bind("click", function () {
                 setTimeout(function() { // delay to avoid React clears message-input
                     $("#hc-message-input").val("/quote " + b.next('.msg-line').text());
@@ -18,7 +18,7 @@ $(function(){
             b.append(quoteButton);
 
             // add Re: button
-            var reButton = $("<button class='btn btn-addon btn-primary btn-xs'>Re:</button>");
+            var reButton = $("<button style='height:18px;' class='btn btn-addon btn-primary btn-xs'>Re:</button>");
             reButton.bind("click", function () {
                 setTimeout(function() {
                     var name = b.parents('.hc-chat-msg').children('.sender-name').text();
