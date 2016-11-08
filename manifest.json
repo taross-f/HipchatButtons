@@ -1,13 +1,13 @@
 {
   "name": "hipchat buttons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "manifest_version": 2,
   "description": "Add quote buttons and response buttons to hipchat.",
   "author": "@tarofufufu",
   "content_scripts": [
     {
       "matches": ["https://*.hipchat.com/chat/room/*"],
-      "css": ["bootstrap/css/bootstrap.min.css"],
+      "css": ["bootstrap/css/bootstrap.min.css", "add_hipchat_button.css"],
       "js": ["jquery-3.1.1.min.js", "bootstrap/js/bootstrap.min.js", "add_hipchat_button.js"]
     }
   ]
